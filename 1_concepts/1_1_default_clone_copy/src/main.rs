@@ -94,7 +94,7 @@ mod point_default_impl {
         }
     }
 
-    // t
+    // implemented derived traits manually
 
     // impl PartialEq for Point {
     //     fn eq(&self, other: &Self) -> bool {
