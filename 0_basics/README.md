@@ -10,13 +10,32 @@ Polish your familiarity by completing [Rust By Example].
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
+
 - What memory model [Rust] has? Is it single-threaded or multiple-threaded? Is it synchronous or asynchronous?
+```
+  - Guaranteed memory-safe! https://deepu.tech/memory-management-in-rust/.
+  Altough docs say that memory model in Rust is still not defined: 
+  https://doc.rust-lang.org/reference/memory-model.html.
+  The memory is managed using RAII with optional reference counting.
+  - 
+```
 - What runtime [Rust] has? Does it use a GC (garbage collector)?
+  - ...
+  - No. 
 - What statically typing means? What is a benefit of using it?
 - What are generics and parametric polymorphism? Which problems do they solve?
 - What are traits? How are they used? How do they compare to interfaces? What are an auto trait and a blanket impl? What is a marker trait?
 - What are static and dynamic dispatches? Which should I use, and when?
 - What is a crate and what is a module in Rust? How do they differ? How are the used?
+```
+  - Crate is like a package in other frameworks (e.g. dotnetcore, node, etc.). 
+  It is a commpilation unit in Rust.
+  - Module is a logical unit of the code. 
+  It is a collection of different items - structs, functions, traits, impl and other mods.
+  - Multiple modules compile into a crate.
+  - Modules are used to divide crates into the logical units of code (as it follows from the above). 
+  Crates can represent runnable code (binary crates), or libraries (reusable code).
+```
 - What are move semantics? What are borrowing rules? What is the benefit of using them?
 - What is immutability? What is the benefit of using it?
 - What is cloning? What is copying? How do they compare?
@@ -27,6 +46,8 @@ After completing these steps, you should be able to answer (and understand why) 
 - Why [Rust] has `&str` and `String` types? How do they differ? When should you use them?
 - What are lifetimes? Which problems do they solve? Which benefits do they give?
 - Is [Rust] OOP language? Is it possible to use SOLID/GRASP? Does it have an inheritance?
+  - No, although it has some possibilities to implement some OOP features (e.g. interfaces ~= traits).
+  - 
 
 After you're done notify your lead in an appropriate PR (pull request), and he will exam what you have learned.
 
